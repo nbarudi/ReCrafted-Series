@@ -1,0 +1,17 @@
+#Creation of Snake Areans
+arenas:
+  tempArena:
+    world: "blah"
+    startPos:
+      x: 0
+      y: 0
+      z: 0
+    endPos:
+      x: 0
+      y: 0
+      z: 0
+spawn:
+  world: "blah"
+  x: 0
+  y: 0
+  z: 0

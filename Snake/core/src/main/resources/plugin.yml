@@ -1,0 +1,7 @@
+name: ${projectName}
+version: ${version}
+main: ${main}
+api-version: 1.19
+depend:
+  - WorldEdit
+authors: [Bungo]

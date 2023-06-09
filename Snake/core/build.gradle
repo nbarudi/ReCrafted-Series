@@ -1,0 +1,26 @@
+plugins {
+    id("com.github.johnrengelman.shadow") version "8.1.0"
+}
+
+
+dependencies {
+    shadow(project(path: ":nms:shared", configuration: "apiElements"))
+    shadow(project(path: ":nms:v1_19_R3", configuration: "reobf"))
+
+    implementation(group: "com.sk89q.worldedit", name: "worldedit-bukkit", version: "7.3.0-SNAPSHOT")
+}
+
+shadowJar {
+    configurations = [project.configurations.shadow]
+
+    relocate("kotlin", "ca.bungo.template.shaded.kotlin")
+
+    setArchiveBaseName("Snake")
+    setArchiveVersion("${version}")
+
+    setArchiveClassifier("")
+}
+
+artifacts {
+    archives shadowJar
+}
